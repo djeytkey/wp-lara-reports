@@ -11,6 +11,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>@yield('title')</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/admin/dist/img/favicon.png') }}">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->

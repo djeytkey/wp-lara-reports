@@ -14,17 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
 Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/', function () {
-        return view('layouts.admin');
-    });
-    
-    Route::get('/orders', [App\Http\Controllers\OrderController::class, 'index'])->name('orders');
+    Route::get('users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+    Route::get('orders', [\App\Http\Controllers\OrderController::class, 'index'])->name('orders.index');
 
+    Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
+    Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
 });
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

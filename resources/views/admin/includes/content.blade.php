@@ -3,14 +3,8 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <h1 class="m-0 text-dark">@yield('contentheader')</h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    {{-- <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item">@yield('contentheaderlink')</li>
-                        <li class="breadcrumb-item active">@yield('contentheaderactive')</li>
-                    </ol> --}}
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -18,12 +12,8 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <div class="content">
-        <div class="container-fluid">
 
-            @yield('content')
+    @yield('content')
 
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
+    <!-- /.Main content -->
 </div>
